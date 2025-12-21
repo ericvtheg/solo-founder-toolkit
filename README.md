@@ -29,13 +29,11 @@ This toolkit is opinionated. It favors speed over polish, revenue over vanity me
 
 ## Installation
 
-```bash
-# Clone the repository
-git clone https://github.com/ericvtheg/solo-founder-toolkit.git
-
-# Add to your Claude Code plugins
-# (See Claude Code documentation for plugin installation)
-```
+1. Start a Claude Code session
+2. Run `/plugins`
+3. Select "Add from marketplace"
+4. Paste: `https://github.com/ericvtheg/solo-founder-toolkit`
+5. Select the `solo-founder-toolkit` plugin
 
 ## Quick Start
 
