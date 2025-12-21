@@ -1,6 +1,32 @@
 # Solo Founder Toolkit
 
-A collection of Claude Code plugins designed for solo founders, indie hackers, and small teams who are shipping fast and iterating quickly.
+A Claude Code plugin designed for solo founders, indie hackers, and small teams who are shipping fast and iterating quickly.
+
+## CRITICAL: Always Use Available Skills and Agents
+
+**Before doing ANY task, check if a skill or agent exists for it and use it.**
+
+This is a plugin development project. The skills and agents listed below exist specifically to help build plugin components. **You MUST use them proactively** - don't wait to be asked.
+
+### Mandatory Skill/Agent Usage Rules
+
+**When creating skills** → Use `skill-development` skill FIRST
+**When creating agents** → Use `agent-development` skill FIRST
+**When creating commands** → Use `command-development` skill FIRST
+**When creating hooks** → Use `hook-development` skill FIRST
+**When adding MCP integration** → Use `mcp-integration` skill FIRST
+**When adding plugin settings** → Use `plugin-settings` skill FIRST
+**When scaffolding plugin structure** → Use `plugin-structure` skill FIRST
+
+**After creating/modifying components:**
+- Use `skill-reviewer` agent to validate skills
+- Use `plugin-validator` agent to validate overall plugin structure
+
+**Why this matters:** These tools exist to prevent mistakes and follow best practices. Not using them wastes time and creates technical debt.
+
+## Plugin Location
+
+All plugin components live in: `plugins/solo-founder-toolkit/`
 
 ## Target Audience
 
@@ -41,6 +67,11 @@ This toolkit embraces the solo founder mindset: ship fast, iterate quickly, and 
 - **WHEN to ship** - Balancing quality with speed to market
 
 Only provide tech stack advice when explicitly asked. Solo founders know their tools.
+
+## Out of Scope
+
+This toolkit intentionally does NOT cover:
+- **Roadmap planning and management** - This is a solved problem with many excellent tools (Linear, GitHub Projects, Notion, etc.). Use existing solutions instead of building custom roadmap tooling.
 
 ## Naming Convention
 
