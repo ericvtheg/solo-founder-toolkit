@@ -1,22 +1,16 @@
 {
   "name": "solo-founder-toolkit",
   "version": "1.0.0",
-  "description": "Claude Code toolkit for solo founders by @ericvtheg",
+  "description": "Claude Code toolkit for solo founders",
   "owner": {
     "name": "Eric Ventor",
     "email": "ericventor97@gmail.com"
   },
   "plugins": [
     {
-      "name": "claude",
-      "source": "./plugins/claude",
-      "description": "Claude Development Plugin That Can Create Commands, Scripts, and Hooks for Claude Code",
-      "category": "development"
-    },
-    {
-      "name": "git",
-      "source": "./plugins/git",
-      "description": "Comprehensive Git Development Workflows Specializing in Git Operations",
+      "name": "solo-founder-toolkit",
+      "source": "./plugins/solo-founder-toolkit",
+      "description": "Claude Code toolkit for solo founders, indie hackers, and small teams shipping fast",
       "category": "productivity"
     }
   ]
