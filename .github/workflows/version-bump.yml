@@ -1,0 +1,53 @@
+name: Version Bump
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  bump-version:
+    runs-on: ubuntu-latest
+    # Skip if the commit was made by this workflow (prevents infinite loop)
+    if: "!contains(github.event.head_commit.message, '[skip ci]') && !contains(github.event.head_commit.message, 'chore(release):')"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Full history for commit analysis
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Calculate and bump version
+        id: bump
+        run: ./scripts/bump-version.sh
+
+      - name: Commit and push version bump
+        if: steps.bump.outputs.bumped == 'true'
+        run: |
+          git add plugins/solo-founder-toolkit/.claude-plugin/plugin.json package.json
+          git commit -m "chore(release): bump version to ${{ steps.bump.outputs.new_version }} [skip ci]"
+          git tag "v${{ steps.bump.outputs.new_version }}"
+          git push
+          git push --tags
+
+      - name: Summary
+        run: |
+          if [ "${{ steps.bump.outputs.bumped }}" == "true" ]; then
+            echo "### Version Bumped! :rocket:" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "- **New version:** v${{ steps.bump.outputs.new_version }}" >> $GITHUB_STEP_SUMMARY
+            echo "- **Bump type:** ${{ steps.bump.outputs.bump_type }}" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "### No Version Bump Required" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "No feat, fix, or breaking change commits detected." >> $GITHUB_STEP_SUMMARY
+          fi
