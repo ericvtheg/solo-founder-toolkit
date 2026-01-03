@@ -34,11 +34,11 @@ Avoid:
 - Fake or estimated metrics (ONLY use real numbers if available)
 
 ## Tweet Style Guide
-Emulate the style of @levelsio and prominent indie hackers:
-- **Casual and authentic**: Use lowercase, casual language, be yourself
+Emulate the style of prominent indie hackers:
+- **Casual and authentic**: Conversational tone, mostly proper grammar and capitalization
 - **Show don't tell**: Share what you built, not that you're "working hard"
 - **Numbers and specifics**: Use real data from commits/code if available, otherwise focus on the feature itself
-- **Brief and punchy**: Get to the point, use line breaks for readability
+- **Natural flow**: Write like you're telling a friend - avoid forced line breaks after every sentence
 - **Visual**: Note when screenshots/demos would enhance the tweet
 - **Humble flex**: Share wins without sounding braggy ("finally shipped X" vs "I'm crushing it")
 - **Transparent**: Share the real story, including struggles
