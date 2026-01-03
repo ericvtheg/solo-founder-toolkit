@@ -28,7 +28,7 @@ jobs:
 
       - name: Calculate and bump version
         id: bump
-        run: ./scripts/bump-version.sh
+        run: bash ./scripts/bump-version.sh
 
       - name: Commit and push version bump
         if: steps.bump.outputs.bumped == 'true'
