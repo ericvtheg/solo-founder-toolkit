@@ -1,16 +1,11 @@
 # Solo Founder Toolkit
 
-**A Claude Code plugin for indie hackers who ship fast and iterate faster.**
-
-You're building alone. You don't have a PM to prioritize features, a marketing team to write copy, or a CTO to sanity-check your architecture. You wear every hat, make every decision, and ship every feature.
-
-This toolkit is your unfair advantage.
+Too often I found myself getting into the engineering weeds of something that didn't matter. This Claude Code plugin helps relentenly focus on results instead of just doing refactors or building features that are "fun" instead of meaningful.
 
 ## What It Does
 
 The Solo Founder Toolkit extends Claude Code with tools built specifically for the indie hacker workflow:
 
-- **Automatic progress tracking** - Metrics and user feedback get logged as you work, no manual bookkeeping
 - **Decision frameworks** - Stop overthinking, start shipping with battle-tested prioritization
 - **Landing page optimization** - CRO feedback without hiring a conversion consultant
 - **Build in public content** - Turn your commits into Twitter content that attracts users
